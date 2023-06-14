@@ -1,5 +1,7 @@
 import { EvilIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import { TouchableOpacity } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
 import { StyleSheet, Text, View } from "react-native";
 function Detail() {
   return (
@@ -36,7 +38,6 @@ function Detail() {
               </View>
               <View>
                 <Text style={{ fontWeight: 300, fontSize: 12 }}>
-                  {" "}
                   Yogyakarta
                 </Text>
               </View>
@@ -54,6 +55,21 @@ function Detail() {
               <Text style={styles.textDescription}>
                 Dapat membuat responsive webpage
               </Text>
+            </View>
+          </View>
+          <View style={styles.bottomBtn}>
+            <TouchableOpacity style={styles.lamarBtn}>
+              <View>
+                <Text style={styles.lamarText}>Lamar</Text>
+              </View>
+            </TouchableOpacity>
+            <View style={styles.saveBtn}>
+              <AntDesign
+                style={{ textAlign: "center" }}
+                name="save"
+                size={35}
+                color="grey"
+              />
             </View>
           </View>
         </View>
@@ -98,11 +114,34 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 0.2,
     marginHorizontal: 20,
+    // flex: 1,
+    // marginBottom: 30,
   },
   row: {
     flexDirection: "row",
   },
   textDescription: {
     fontSize: 13,
+  },
+  bottomBtn: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingTop: 260,
+  },
+  lamarBtn: {
+    width: "80%",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#7DE5ED",
+  },
+  lamarText: {
+    color: "white",
+  },
+  saveBtn: {
+    // backgroundColor: "#7DE5ED",
+    borderStyle: "solid",
+    borderWidth: 0.5,
+    width: "15%",
+    borderColor: "grey",
   },
 });
